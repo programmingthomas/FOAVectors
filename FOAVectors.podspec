@@ -11,18 +11,10 @@ Pod::Spec.new do |s|
   s.name             = "FOAVectors"
   s.version          = "0.1.0"
   s.summary          = "Easy rendering of Font Awesome vectors for iOS."
-  s.description      = <<-DESC
-                       An optional longer description of FOAVectors
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
-                       DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/FOAVectors"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  s.homepage         = "https://github.com/programmingthomas/FOAVectors"
   s.license          = 'MIT'
   s.author           = { "Programming Thomas" => "programmingthomas@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/FOAVectors.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => "https://github.com/programmingthomas/FOAVectors.git", :tag => s.version.to_s }
 
   s.platform     = :ios, '7.0'
   s.requires_arc = true
