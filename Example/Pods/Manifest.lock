@@ -1,0 +1,23 @@
+PODS:
+  - COBColorControl (0.1.1)
+  - Expecta (0.3.1)
+  - FOAVectors (0.1.0)
+  - Specta (0.2.1)
+
+DEPENDENCIES:
+  - COBColorControl
+  - Expecta
+  - FOAVectors (from `../`)
+  - Specta (~> 0.2.1)
+
+EXTERNAL SOURCES:
+  FOAVectors:
+    :path: ../
+
+SPEC CHECKSUMS:
+  COBColorControl: 48ba976bb11bdbf6d6fb988f7a1d8e8c3ed67e7d
+  Expecta: 03aabd0a89d8dea843baecb19a7fd7466a69a31d
+  FOAVectors: 05f9910ab5305361b5da2e88e231ca803f417b14
+  Specta: 9141310f46b1f68b676650ff2854e1ed0b74163a
+
+COCOAPODS: 0.33.1

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="14A329f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="QYs-gB-M2M">
+    <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="02v-hI-2R3">
+            <objects>
+                <navigationController id="QYs-gB-M2M" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dKi-qG-LmM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Efy-ui-CpY" kind="relationship" relationship="rootViewController" id="Uz5-8e-Rf5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dwm-ga-DnO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="193" y="336"/>
+        </scene>
+        <!--Font Awesome Vectors-->
+        <scene sceneID="zT4-zy-hFk">
+            <objects>
+                <collectionViewController id="Efy-ui-CpY" customClass="FOAViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="2Yv-ZT-Z2a">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="V5y-9N-hIb">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="bpv-I4-BhY" customClass="FOAGlyphCollectionViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3BO-j9-cdj" customClass="FOAGlyphView">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <outlet property="glyphView" destination="3BO-j9-cdj" id="85n-g4-jjs"/>
+                                    <segue destination="cP3-IY-tMo" kind="push" identifier="glyphSegue" id="8DR-VS-Csp"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Efy-ui-CpY" id="la0-Vg-Fjh"/>
+                            <outlet property="delegate" destination="Efy-ui-CpY" id="XOF-QM-ctN"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Font Awesome Vectors" id="0O8-BK-Oxm"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4RR-06-age" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="631" y="336"/>
+        </scene>
+        <!--Glyph-->
+        <scene sceneID="bZS-LA-Kdh">
+            <objects>
+                <viewController id="cP3-IY-tMo" customClass="FOAGlyphViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IMx-eI-vCG"/>
+                        <viewControllerLayoutGuide type="bottom" id="dQh-39-hQH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gii-Lf-NOq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HJO-lI-RQv" customClass="FOAGlyphView">
+                                <rect key="frame" x="35" y="72" width="250" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="HJO-lI-RQv" secondAttribute="height" multiplier="1:1" id="e7g-qK-he8"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d95-ep-x8h" customClass="COBColorControl">
+                                <rect key="frame" x="20" y="368" width="280" height="180"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="Qh6-hk-UTU"/>
+                                    <constraint firstAttribute="height" constant="180" id="eKG-gN-qab"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="colorChanged:" destination="cP3-IY-tMo" eventType="valueChanged" id="Ykg-es-dEF"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7P-Uw-bQF">
+                                <rect key="frame" x="35" y="330" width="250" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Bhf-u1-rNa"/>
+                                    <constraint firstAttribute="height" constant="21" id="oZU-Bz-ki5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="HJO-lI-RQv" secondAttribute="centerX" id="IJU-tl-1WS"/>
+                            <constraint firstItem="u7P-Uw-bQF" firstAttribute="top" secondItem="HJO-lI-RQv" secondAttribute="bottom" constant="8" id="LDw-rC-t51"/>
+                            <constraint firstAttribute="centerX" secondItem="d95-ep-x8h" secondAttribute="centerX" id="PJq-vc-XTI"/>
+                            <constraint firstAttribute="centerX" secondItem="u7P-Uw-bQF" secondAttribute="centerX" id="Wvd-Ix-XvV"/>
+                            <constraint firstItem="d95-ep-x8h" firstAttribute="top" secondItem="u7P-Uw-bQF" secondAttribute="bottom" constant="17" id="X5x-NK-N7E"/>
+                            <constraint firstItem="dQh-39-hQH" firstAttribute="top" secondItem="d95-ep-x8h" secondAttribute="bottom" constant="20" id="qfJ-Er-d8e"/>
+                            <constraint firstItem="HJO-lI-RQv" firstAttribute="top" secondItem="IMx-eI-vCG" secondAttribute="bottom" constant="8" id="t04-sH-rZB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Glyph" id="oty-PL-TQQ"/>
+                    <connections>
+                        <outlet property="colorControl" destination="d95-ep-x8h" id="24g-Aa-17Z"/>
+                        <outlet property="glyphView" destination="HJO-lI-RQv" id="jCz-ds-5Ta"/>
+                        <outlet property="nameLabel" destination="u7P-Uw-bQF" id="1K0-8Z-Q7u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hfe-d1-Icx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1070" y="336"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4">
+            <size key="portraitSize" width="320" height="568"/>
+            <size key="landscapeSize" width="568" height="320"/>
+        </simulatedScreenMetrics>
+    </simulatedMetricsContainer>
+</document>

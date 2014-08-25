@@ -1,0 +1,11 @@
+target 'FOAVectors', :exclusive => true do
+  pod "FOAVectors", :path => "../"
+  pod "COBColorControl"
+end
+
+target 'Tests', :exclusive => true do
+  pod "FOAVectors", :path => "../"
+
+  pod 'Specta', '~> 0.2.1'
+  pod 'Expecta'
+end
